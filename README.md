@@ -1,2 +1,34 @@
-# ITA
-ITA - IT Arhitekture
+# 📘 ITA - IT Arhitekture
+
+Dobrodošli v repozitoriju predmeta **ITA**, ki bo služil kot glavna platforma za izvajanje vaj in shranjevanje učnih materialov med semestrom. 
+
+## 📂 Struktura repozitorija
+
+Repozitorij je organiziran po sklopih vaj, ki jih bomo izvajali tekom semestra. Vsak sklop bo vseboval potrebne vire, kodo in navodila za izvedbo nalog.
+
+- `/01_vaja`: Vaja 1 - [🔍 Kratek opis vsebine vaje]
+- `/02_vaja`: Vaja 2 - [🔍 Kratek opis vsebine vaje]
+- ...
+
+Mape bodo vsebovale:
+- 📄 **Navodila** v obliki Markdown ali PDF datoteke
+- 💻 **Primeri kode** za posamezne korake vaj
+- 📁 **Dodatne vire** (npr. podatkovne baze, knjižnice, konfiguracijske datoteke)
+
+## ⚠️ Pogoji Uporabe
+
+Gradivo in koda v tem repozitoriju so namenjeni izključno za študente predmeta ITA. Kopiranje ali širjenje brez dovoljenja ni dovoljeno.
+
+## 💬 Prispevanje in podpora
+
+V primeru težav ali vprašanj se obrnite na [tilen.hlis@um.si] ali pa ustvarite *issue* tukaj na GitHubu.
+
+## ❓ Pogosta vprašanja
+
+**❔ Kaj storim, če ne morem dostopati do vsebine?**  
+Prosimo, preverite, ali imate veljavno GitHub prijavo in dovoljenja za dostop. V primeru težav kontaktirajte asistenta.
+
+**📤 Kako oddam nalogo?**  
+Naloge bodo ocenjene na vašem lastnem repozitoriju.
+
+---

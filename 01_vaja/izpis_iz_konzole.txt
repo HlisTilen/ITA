@@ -1,0 +1,146 @@
+Vzpostavitev okolja (Emulator)
+
+nalogeFaaS firebase init           
+(node:2587) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/tilen/Developer/temp/nalogeFaaS
+
+? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. 
+
+Emulators: Set up local emulators for Firebase products
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+? Please select an option: Use an existing project
+? Select a default Firebase project for this directory: faasnaloge (faasnaloge)
+i  Using project faasnaloge (faasnaloge)
+
+=== Emulators Setup
+? Which Firebase emulators do you want to set up? Press Space to select emulators, then Enter to confirm your choices. 
+Functions Emulator, Firestore Emulator
+? Which port do you want to use for the functions emulator? 5001
+? Which port do you want to use for the firestore emulator? 8080
+? Would you like to enable the Emulator UI? Yes
+? Which port do you want to use for the Emulator UI (leave empty to use any available port)? 
+? Would you like to download the emulators now? Yes
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+i  Writing gitignore file to .gitignore...
+
+✔  Firebase initialization complete!
+➜  nalogeFaaS mkdir functions
+➜  nalogeFaaS cd functions 
+➜  functions firebase init functions         
+(node:2835) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/tilen/Developer/temp/nalogeFaaS
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add, 
+but for now we'll just set up a default project.
+
+i  Using project faasnaloge (faasnaloge)
+
+=== Functions Setup
+Let's create a new codebase for your functions.
+A directory corresponding to the codebase will be created in your project
+with sample code pre-configured.
+
+See https://firebase.google.com/docs/functions/organize-functions for
+more information on organizing your functions using codebases.
+
+Functions can be deployed with firebase deploy.
+
+? What language would you like to use to write Cloud Functions? JavaScript
+? Do you want to use ESLint to catch probable bugs and enforce style? No
+✔  Wrote functions/package.json
+✔  Wrote functions/index.js
+✔  Wrote functions/.gitignore
+? Do you want to install dependencies with npm now? Yes
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: undefined,
+npm warn EBADENGINE   required: { node: '18' },
+npm warn EBADENGINE   current: { node: 'v22.9.0', npm: '10.9.0' }
+npm warn EBADENGINE }
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+added 480 packages, and audited 481 packages in 2s
+
+51 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
+✔  Firebase initialization complete!
+➜  functions cd ..       
+➜  nalogeFaaS firebase emulators:start
+(node:2972) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+i  emulators: Starting emulators: functions, firestore, extensions
+⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, hosting, pubsub, storage, dataconnect
+⚠  firestore: Cloud Firestore Emulator does not support multiple databases yet.
+⚠  firestore: Did not find a Cloud Firestore rules file specified in a firebase.json config file.
+⚠  firestore: The emulator will default to allowing all reads and writes. Learn more about this option: https://firebase.google.com/docs/emulator-suite/install_and_configure#security_rules_configuration.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  ui: Emulator UI logging to ui-debug.log
+i  functions: Watching "/Users/tilen/Developer/temp/nalogeFaaS/functions" for Cloud Functions...
+⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host.
+Serving at port 8529
+
+✔  functions: Loaded functions definitions from source: .
+
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
